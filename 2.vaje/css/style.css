@@ -1,0 +1,72 @@
+
+/* stil za vizitko podjetja */
+.card {
+    border: 1px solid #404e56;
+    border-radius: 10px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c0c0c0;
+}
+.card .address h2 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    color: #404e56;
+}
+.card .address h3 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 18px;
+}
+.card .address a {
+    display: block;
+    color: #404e56;
+    font-size: 16px;
+    text-decoration: none;
+}
+.card .address a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* pozicioniranje teksta na sliko */
+.album figure {
+    width: 400px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.album figure img {
+    width: 100%;
+}
+.album figure figcaption {
+    position: absolute;
+    bottom: 4px;
+    padding: 8px 15px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+}
+
+.table table {
+    margin: 50px;
+    border: 1px solid #c0c0c0;
+}
+.table table th, .table table td {
+    padding: 5px;
+    border: 1px solid #c0c0c0;
+    text-align: center;
+}
+.table table thead tr {
+    background: #c0c0c0;
+}
+.table table tbody tr:hover {
+    background: #c0c0c0;
+    cursor: pointer;
+}
+.table table tbody tr:nth-child(even) {
+    background: #ededed;
+}
