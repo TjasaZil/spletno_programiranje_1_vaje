@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Domača naloga 2</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigacija -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Index</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-brand">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Index</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="o-meni.html">O Meni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- carousel -->
+
+      <div class="container p-5">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="./img/pic1.jpg" class="d-block w-100" alt="image 1" />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="./img/pic2.jpg" class="d-block w-100" alt="image2" />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="./img/pic3.jpg" class="d-block w-100" alt="image3" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- tabele -->
+      <div class="container">
+        <!-- tabela 1 -->
+        <div class="container p-5">
+          <table class="table table-hover p-5">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Žival</th>
+                <th scope="col">Razred</th>
+                <th scope="col">Habitat</th>
+                <th scope="col">Prehrana</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Slon</td>
+                <td>Sesalec</td>
+                <td>Savanna</td>
+                <td>Rastlinojed</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Lev</td>
+                <td>Sesalec</td>
+                <td>Savanna</td>
+                <td>Mesojed</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Delfin</td>
+                <td>Sesalec</td>
+                <td>Ocean</td>
+                <td>Mesojed</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Orel</td>
+                <td>Ptič</td>
+                <td>Gore</td>
+                <td>Mesojed</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Pingvin</td>
+                <td>Ptič</td>
+                <td>Antarktika</td>
+                <td>Karnivorec</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Kenguru</td>
+                <td>Sesalec</td>
+                <td>Tropski gozd</td>
+                <td>Vsejed</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Panda</td>
+                <td>Sesalec</td>
+                <td>Gozd</td>
+                <td>Rastlinojed</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Gorila</td>
+                <td>Sesalec</td>
+                <td>Drevnati gozd</td>
+                <td>Vsejed</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Tiger</td>
+                <td>Sesalec</td>
+                <td>Gozd</td>
+                <td>Plenilec</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Modri kit</td>
+                <td>Sesalec</td>
+                <td>Ocean</td>
+                <td>Kril</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- tabela 2 -->
+        <div class="container p-5">
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Twitter</th>
+                <th scope="col">GitHub</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Ana</td>
+                <td>Kovač</td>
+                <td>@ana_kovac</td>
+                <td>@anakovac</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Miha</td>
+                <td>Zajc</td>
+                <td>@miha_zajc</td>
+                <td>@mzajc</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Eva</td>
+                <td>Novak</td>
+                <td>@eva_novak</td>
+                <td>@enovak</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Marko</td>
+                <td>Horvat</td>
+                <td>@marko_horvat</td>
+                <td>@mhorvat</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Nina</td>
+                <td>Kranjc</td>
+                <td>@nina_kranjc</td>
+                <td>@nkranjc</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Peter</td>
+                <td>Vidmar</td>
+                <td>@peter_vidmar</td>
+                <td>@pvidmar</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Katja</td>
+                <td>Zupan</td>
+                <td>@katja_zupan</td>
+                <td>@kzupan</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Žiga</td>
+                <td>Novič</td>
+                <td>@ziga_novic</td>
+                <td>@znovic</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Jana</td>
+                <td>Potočnik</td>
+                <td>@jana_potocnik</td>
+                <td>@jpotocnik</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Urban</td>
+                <td>Petrič</td>
+                <td>@urban_petric</td>
+                <td>@upetric</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

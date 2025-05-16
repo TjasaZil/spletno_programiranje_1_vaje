@@ -1,0 +1,166 @@
+:root {
+    --colorBlack: #333;
+    --colorGreen: #3c4b52;
+    --colorSilver: #c0c0c0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.leftRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: var(--colorSilver);
+}
+
+/* Hamburger gumb */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--colorGreen);
+}
+
+/* Skrij checkbox */
+.navToggle {
+    display: none;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+}
+
+header ul li:last-child {
+    margin: 0;
+}
+
+header ul li a {
+    display: block;
+    padding: 8px 12px;
+    background: var(--colorGreen);
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul li:hover a, header ul li.active a {
+    background: #fff;
+    color: var(--colorGreen);
+}
+
+main .container {
+    display: flex;
+}
+
+main aside {
+    width: 15%;
+}
+
+main aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main aside ul li {
+    margin: 0 0 8px 0;
+}
+
+main aside ul li:last-child {
+    margin: 0;
+}
+
+main aside ul li a {
+    display: block;
+    padding: 8px 12px;
+    background: var(--colorGreen);
+    color: #fff;
+    text-decoration: none;
+    border-left: 5px solid transparent;
+}
+
+main aside ul li:hover a, main aside ul li.active a  {
+    background: var(--colorSilver);
+    border-left: 5px solid var(--colorGreen);
+}
+
+main section {
+    width: 100%;
+    padding: 0 0 0 15px;
+}
+
+main section h1 {
+    color: var(--colorGreen);
+    margin: 0 0 8px 0;
+}
+
+main section figure {
+    float: right;
+    margin: 0 0 8px 8px;
+    border: 1px solid var(--colorSilver);
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+main section figure img {
+    width: 100%;
+}
+
+main section figure figcaption {
+    position: absolute;
+    bottom: 4px;
+    padding: 8px 15px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+}
+
+footer {
+    background: var(--colorSilver); 
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+}
+
+footer ul li:last-child {
+    margin: 0;
+}
+
+footer ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li:hover a {
+    color: var(--colorGreen);
+}

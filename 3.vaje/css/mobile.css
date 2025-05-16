@@ -1,0 +1,138 @@
+/* mobile.css: Responsive styling for max-width: 991px */
+
+/* Responsive meni za max-width 991px */
+@media only screen and (max-width: 991px) {
+    /* Prikaz hamburgerja */
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    /* Skrij navigacijo */
+    .navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    /* Prikaži meni, če je checkbox aktiven */
+    .navToggle:checked + .hamburger + .navMenu {
+        display: flex;
+    }
+
+    .navMenu li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .navMenu li a {
+        display: block;
+        width: 100%;
+        background: var(--colorGreen);
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .navMenu li.active a,
+    .navMenu li:hover a {
+        background: var(--colorSilver);
+        color: var(--colorGreen);
+    }
+
+    /* Glavni container v headerju naj bo vertikalen */
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+header ul li a {
+    width: 100%;
+    text-align: left;
+}
+
+/* MAIN */
+main .container {
+    flex-direction: column;
+}
+
+main aside {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+main aside ul li a {
+    padding: 10px;
+}
+
+main section {
+    width: 100%;
+    padding: 0;
+}
+
+main section figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+/* FOOTER */
+footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer p {
+    margin: 0;
+}
