@@ -10,14 +10,14 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-warning">
     <!-- navigacija -->
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Kontakt</a>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-warning-subtle">
+        <div class="container ps-5">
+          <a class="navbar-brand" href="#">Domača naloga 2</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler me-4"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -30,7 +30,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-brand">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="index.html"
                   >Index</a
                 >
               </li>
@@ -38,7 +38,7 @@
                 <a class="nav-link" href="o-meni.html">O Meni</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                <a class="nav-link active" href="kontakt.html">Kontakt</a>
               </li>
             </ul>
           </div>
@@ -47,104 +47,70 @@
     </header>
 
     <main>
-      <!--● ime in priimek
-● e-mail naslov
-● telefon
-● vaše sporočilo
-● gumb za potrditev
--->
       <div class="container p-5">
         <form>
-          <div class="container text-left">
-            <div class="row mb-3">
-              <div class="col">
-                <div>
-                  <label for="exampleInputIme1" class="form-label"
-                    >Ime in priimek</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputime1"
-                  />
-                </div>
-              </div>
-              <div class="col">
-                <div>
-                  <label for="exampleInputEmail1" class="form-label"
-                    >Email naslov</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                  />
-                </div>
-              </div>
-              <div class="col">
-                <div>
-                  <label for="exampleInputphone1" class="form-label"
-                    >Telefon</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="exampleInputphone1"
-                  />
-                </div>
-              </div>
+          <!-- ime, email, telefon -->
+          <div class="row mb-3">
+            <div class="col-12 col-md-4">
+              <label for="inputIme" class="form-label">
+                Ime in priimek <span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputIme"
+                name="ime"
+                required
+              />
             </div>
-            <div class="row">
-              <div class="col">
-                <div>
-                  <label for="exampleFormControlTextarea1" class="form-label"
-                    >Sporočilo</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="6"
-                  ></textarea>
-                </div>
-              </div>
+
+            <div class="col-12 col-md-4">
+              <label for="inputEmail" class="form-label">
+                Email naslov <span class="text-danger">*</span>
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                name="email"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-4">
+              <label for="inputTelefon" class="form-label"> Telefon </label>
+              <input
+                type="tel"
+                class="form-control"
+                id="inputTelefon"
+                name="telefon"
+              />
             </div>
           </div>
-          <!--<div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
+
+          <!-- sporočilo textarea -->
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="inputSporocilo" class="form-label">
+                Sporočilo <span class="text-danger">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="inputSporocilo"
+                name="sporocilo"
+                rows="6"
+                required
+              ></textarea>
             </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+
+          <!-- submit button-->
+          <div class="row">
+            <div class="col text-end">
+              <button type="submit" class="btn btn-primary">Pošljite</button>
+            </div>
           </div>
-          <div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
-            >
-          </div>-->
-          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </main>

@@ -10,13 +10,13 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-warning">
     <header>   <!-- navigacija -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">O meni</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-warning-subtle">
+      <div class="container ps-5">
+        <a class="navbar-brand" href="#">Domača naloga 2</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler me-4"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -29,12 +29,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-brand">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link" aria-current="page" href="index.html"
                 >Index</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="o-meni.html">O Meni</a>
+              <a class="nav-link active" href="o-meni.html">O Meni</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -44,30 +44,31 @@
       </div>
     </nav></header>
     <main>
-      <div class="container pt-5 pb-5
+      <div class="container p-5
       ">
          <div class="row ">
-    <div class="col-4">
-       <h2>Osebni podatki</h2>
-        <p>Tjaša Žilavec</p>
-        <span>20251604</span>
+    <div class="col-12 col-md-4">
+      
+       <h2 class="text-secondary">Osebni podatki</h2>
+        <p class="fs-4">Tjaša Žilavec</p>
+        <span class="fs-6">20251604</span>
     </div>
-    <div class="col-8">
-        <section>
+    <div class="col-12 col-md-8">
+       
   <img
         src="./img/pic2.jpg"
         alt="image of a white path between greens that is going to the sea"
         title="White path at the sea"
-        width="auto"
+        class="img-fluid"
         
       />
-        </section>
+       
     </div> 
   </div>
       </div>
      
       <div class="container p-5">
-        <h2>O meni</h2>
+        <h2 class="text-secondary">O meni</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
           condimentum arcu, ut accumsan sapien. Cras ultrices at purus vehicula
@@ -132,33 +133,33 @@
       ">
          <div class="row ">
     <div class="col-6">
-       <h2>Najljubše povezave</h2>
+       <h2 class="text-secondary">Najljubše povezave</h2>
          <ul>
         <li>
-          <a href="https://www.24ur.com/" target="_blank">24ur</a>
+          <a href="https://www.24ur.com/" target="_blank" class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">24ur</a>
         </li>
         <li>
-          <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+          <a href="https://fonts.google.com/" target="_blank" class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Google Fonts</a>
         </li>
         <li>
-        <a href="https://www.lipsum.com/" target="_blank">Lipsum</a>
+        <a href="https://www.lipsum.com/" target="_blank" class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Lipsum</a>
         </li>
         <li>
-          <a href="https://picsum.photos/" target="_blank">Lorem Picsum</a>
+          <a href="https://picsum.photos/" target="_blank" class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Lorem Picsum</a>
         </li>
         <li>
-         <a href="https://coolors.co/" target="_blank">Coolors</a>
+         <a href="https://coolors.co/" target="_blank" class="link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Coolors</a>
         </li>
       </ul>
     </div>
     <div class="col-6">
-         <h2>Najljubši filmi</h2>
-         <ol>
-        <li>The Grand Budapest Hotel <span>(2014)</span></li>
-        <li>Inception <span>(2010)</span></li>
-        <li>Parasite <span>(2019)</span></li>
-        <li>The Godfather <span>(1972)</span></li>
-        <li>Spirited Away <span>(2001)</span></li>
+         <h2 class="text-secondary">Najljubši filmi</h2>
+         <ol class="list-group list-group-numbered">
+        <li class="list-group-item list-group-item-warning">The Grand Budapest Hotel <span class="fw-light fst-italic">(2014)</span></li>
+        <li class="list-group-item list-group-item-warning">Inception <span class="fw-light fst-italic">(2010)</span></li>
+        <li class="list-group-item list-group-item-warning">Parasite <span class="fw-light fst-italic">(2019)</span></li>
+        <li class="list-group-item list-group-item-warning">The Godfather <span class="fw-light fst-italic">(1972)</span></li>
+        <li class="list-group-item list-group-item-warning">Spirited Away <span class="fw-light fst-italic">(2001)</span></li>
       </ol>
     </div> 
   </div>
@@ -166,53 +167,53 @@
       
 
       <div class="container p-5">
-        <h2>Države sveta</h2>
+        <h2 class="text-secondary">Države sveta</h2>
         <section >
  <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">Država</th>
-              <th scope="col">Prestolnica</th>
-              <th scope="col">Prebivalstvo (2023)</th>
-              <th scope="col">Površina [km²]</th>
-              <th scope="col">Uradni jezik</th>
+              <th scope="col" class="text-primary">Država</th>
+              <th scope="col" class="text-primary">Prestolnica</th>
+              <th scope="col" class="text-primary">Prebivalstvo (2023)</th>
+              <th scope="col" class="text-primary">Površina [km²]</th>
+              <th scope="col" class="text-primary">Uradni jezik</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Nemčija</td>
-              <td>Berlin</td>
-              <td>83 240 000</td>
-              <td>357 022</td>
-              <td>nemščina</td>
+              <td scope="row" class="text-secondary">Nemčija</td>
+              <td class="text-secondary">Berlin</td>
+              <td class="text-secondary">83 240 000</td>
+              <td class="text-secondary">357 022</td>
+              <td class="text-secondary">nemščina</td>
             </tr>
             <tr>
-              <td scope="row">Slovenija</td>
-              <td>Ljubljana</td>
-              <td>2 080 000</td>
-              <td>20 273</td>
-              <td>slovenščina</td>
+              <td scope="row" class="text-success">Slovenija</td>
+              <td class="text-success">Ljubljana</td>
+              <td class="text-success">2 080 000</td>
+              <td class="text-success">20 273</td>
+              <td class="text-success">slovenščina</td>
             </tr>
             <tr>
-              <td scope="row">Hrvaška</td>
-              <td>Zagreb</td>
-              <td>3 900 000</td>
-              <td>56 594</td>
-              <td>hrvaščina</td>
+              <td scope="row" class="text-danger">Hrvaška</td>
+              <td class="text-danger">Zagreb</td>
+              <td class="text-danger">3 900 000</td>
+              <td class="text-danger">56 594</td>
+              <td class="text-danger">hrvaščina</td>
             </tr>
             <tr>
-              <td scope="row">Avstrija</td>
-              <td>Dunaj</td>
-              <td>9 030 000</td>
-              <td>83 879</td>
-              <td>nemščina</td>
+              <td scope="row" class="text-warning">Avstrija</td>
+              <td class="text-warning">Dunaj</td>
+              <td class="text-warning">9 030 000</td>
+              <td class="text-warning">83 879</td>
+              <td class="text-warning">nemščina</td>
             </tr>
             <tr>
-              <td scope="row">Italija</td>
-              <td>Rim</td>
-              <td>59 000 000</td>
-              <td>301 340</td>
-              <td>italijanščina</td>
+              <td scope="row" class="text-info">Italija</td>
+              <td class="text-info">Rim</td>
+              <td class="text-info">59 000 000</td>
+              <td class="text-info">301 340</td>
+              <td class="text-info">italijanščina</td>
             </tr>
           </tbody>
         </table>
