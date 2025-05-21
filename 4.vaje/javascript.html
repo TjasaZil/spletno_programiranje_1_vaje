@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="window1"></div>
+        <script>
+            // enovrsticni komentar
+            /*
+            alert("Danes je petek!");
+            confirm("Ali se strinjaš da je pred nami vikend?");    
+            */
+
+            document.getElementById('window1').innerText = "Danes je <strong>petek</strong>!";
+
+            // izpisovanje v konzolo
+            console.log("Danes je petek");
+            console.warn("Jutri bo sobota");
+            console.error("Pojutrišnjem bo nedelja!");
+
+            // spremenljivke
+            var myName = "Peter"; // String
+            var dayInWeek = 5; // Int - > number
+            var isNight = false; // Boolean (true ali false)
+            const ssn = 8123467; // konstanta -> read only
+
+            myName = "Lojze";
+            myName = "Franci";
+            
+            // Pozdravljen, $var, dan v tednu je: $var, trenutno je noč: $var
+            // Pozdravljen, Franci, dan v tednu je: 5, trenutno je noč: 0
+            var output = "Pozdravljen, " + myName + ", dan v tednu je: " + dayInWeek + ", trenutno je noč: " + isNight;
+            output += `Pozdravljen, ${myName}, dan v tednu je: ${dayInWeek}, trenutno je noč: ${isNight}`;
+
+            console.log(output);
+
+            // operacije
+            var a = "10";
+            var b = 20;
+            var c = Number(a) + b;
+
+            c = a - b;
+            c = a / b;
+            c = a  * b;
+            
+            // pogojni stavki
+
+            var date = new Date();
+            dayInWeek = date.getDay();
+            console.log(dayInWeek);
+
+            isNight = date.getHours() > 18;
+
+            var dayInWeekName = "";
+            if(dayInWeek == 5 && !isNight) { // isNight == true je enako kot isNight
+                dayInWeekName = "Petek";
+            } else if(dayInWeek == 6) {
+                dayInWeekName = "Sobota";
+            } else if(dayInWeek == 0) {
+                dayInWeekName = "Nedelja";
+            }
+
+            console.log(dayInWeekName);
+
+            switch(dayInWeek) {
+                case 0: 
+                    dayInWeekName = "Nedelja";
+                    break;
+                case 1: 
+                    dayInWeekName = "Ponedeljek";
+                    break;
+                default:
+                    dayInWeekName = "N/A"; 
+                    break;       
+            }
+
+            // pogoj da je dayInWeek petek in 
+            // enovrstični pogojni stavek
+            var isFridayNight = (dayInWeek == 5 && isNight) ? "Je petek zvečer" : "Ni petek zvečer";
+
+            // zanke
+            for(var i = 0; i < 10; i++) {
+                if(i == 3) { // zanka preskoči vrednost
+                    continue;
+                }
+
+                if(i == 8) { // zanka se zaključi
+                    break;
+                }
+
+                console.log(i);
+            }
+
+            var i = 0;
+            while(i < 10) {
+                console.log(i);
+
+                i++;
+            }
+
+            // funkcije
+            function welcomeMessage(myName, myLastName, myCity = "Ljubljana") {
+                var output = "";
+
+                // pozdravljen franc košir, iz novo mesto
+                output = `Pozdravljen, ${myName} ${myLastName}, iz ${myCity}`;
+
+                return output;
+            }
+
+            // Pozdravljen, Franci Franci, iz Ljubljana
+            console.log(welcomeMessage(myName, "Košir"));
+            console.log(welcomeMessage("Janez", "Novak", "Sevnica"));
+
+            // array in objekti
+            //                  0           1           2       3
+            var daysName = ['Nedelja', 'Ponedeljek', 'Torek', 'Sreda'];
+            daysName[2] = "Dan po ponedeljku"; // prepišemo vrednost torek
+            console.log(daysName[3]); // izpiše sreda
+            console.table(daysName);
+
+            // array objektov
+            var usersList = [
+                {
+                    Name: "Janez",
+                    LastName: "Novak",
+                    City: "Krško"
+                },
+                {
+                    Name: "Igor",
+                    LastName: "Novak",
+                    City: "Koper"
+                },
+                {
+                    Name: "Franci",
+                    LastName: "Novak",
+                    City: "Celje"
+                },
+                {
+                    Name: "Ivan",
+                    LastName: "Novak",
+                    City: "Jesenice"
+                }
+            ];          
+            console.log(usersList[1].City); // izpis indexa 1 in ključa City
+
+            for(var i = 0; i < usersList.length; i++) {
+                var Name = usersList[i].Name;
+                var LastName = usersList[i].LastName;
+                var City = usersList[i].City;
+
+                console.log(welcomeMessage(Name, LastName, City));
+            }
+            console.table(usersList);
+            </script>
+    </body>
+</html>
