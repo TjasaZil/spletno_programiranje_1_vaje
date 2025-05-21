@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            .titleH2 {
+                background: red;
+                color: yellow;
+                border: 1px solid #c00c0c;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Naslov spletne strani</h1>
+            <h2>Naslov 2</h2>
+        </header>
+
+        <main>
+            <section>
+                <h3>Naslov 3</h3>
+                <h4>Naslov 4</h4>
+            </section>
+        </main>
+
+        <section>
+            <ul>
+                <li>Seznam 1</li>
+                <li>Seznam 2</li>
+                <li>Seznam 3</li>
+            </ul>
+            <button class="add">Dodaj nov elemnt</button>
+            <button class="remove">Briši zadnji element</button>
+            <button class="read">Preberi podatke z API</button>
+        </section>
+
+        <script>
+            // branje / pisanje v elemente
+            $('header h1.title').html('To je nov naslov spletne strani!');
+            // .html() => .innerHTML = 
+            var readH1 = $('header h1.title').html();
+            console.log(readH1);
+
+            // oblikovanje elementov
+            $('header h1.title').css('color', 'red');
+            $('header h2').addClass('titleH2');
+            $('header h1').removeClass('title');
+
+            // iskanje po elementih
+            // main section
+            $('main section h3').parent().find('h4').html('To je nov naslov H4');
+
+            $('section button.add').click(function() {
+                var counter = $('section ul li').length;
+                counter++;
+                $('section ul').append('<li>Seznam ' + counter + '</li>');
+            });
+
+            $('section button.remove').click(function() {
+                // poišči section > ul > li:last-child (zadnji elmenet) in ga pobriši
+                $('section ul li:last-child').remove();
+            });
+
+            $('section button.read').click(function() {
+                $.get("http://universities.hipolabs.com/search?country=Croatia", function(data, status){
+                    if(data) {
+                        var output = "";
+
+                        // data = JSON.parse(data);
+
+                        for (var i = 0; i < data.length; i++) {
+                            var Name = data[i].name;
+                            var Country = data[i].country;
+                            output += '<li>' + Name + ' (' + Country + ')</li>';
+                        }
+
+                        $('section ul').html(output);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
