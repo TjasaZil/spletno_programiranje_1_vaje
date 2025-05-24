@@ -5,7 +5,7 @@ $username = "4128127_example"; // kopiraj iz AW - Database User:
 $password = "geslo1234"; // iz AW - Database Password:
 $dbName = "4128127_example"; // kopiraj iz AW - Database Name:
 
-// PDO 
+// PDO -> objektno orientiran
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
   // set the PDO error mode to exception
@@ -57,7 +57,7 @@ $data->execute(
 );
 echo '<hr>';
 
-// MySQLI
+// MySQLI - proceduralni način
 $conn = mysqli_connect($servername, $username, $password);
 
 // Check connection
